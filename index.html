@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exemplos de Modules em Javascript</title>
+
+    <!-- carregamento de CSS's externos e internos do projeto -->
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
+
+    <!-- carregamento de scripts externos e internos do projeto -->
+    <script src="./scripts/browser/terminaljs/terminal.js"></script>
+    <script src="./scripts/browser/select-options.js"></script>
+    <script data-main="./scripts/modules/amd/config" src="./node_modules/requirejs/require.js"></script>
+</head>
+<body>
+    <header class="header-style">
+        <nav class="level nav-style">
+            <div class="level-left">
+                <div class="level-item">&nbsp;</div>
+                <div class="level-item">
+                        
+                    <div class="select">
+                        <select id="module-select">
+                            <option value="NOOP">Escolha um tipo</option>
+                            <option value="IIFE">IIFE</option>
+                            <option value="REVEALING">Revealing Module Pattern</option>
+                            <option value="AMD">AMD - Asynchronous Module Definition</option>
+                        </select>
+                    </div>
+                
+                </div>
+                <div class="level-item">
+                    <a class="button is-info is-rounded" onclick="selectOptions()">Executar</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- script principal de execução do browser -->
+    <script src="./scripts/browser/main.js"></script>
+    <!-- o script abaixo registra um número na variável someNum -->
+    <script src="./scripts/modules/iife-module.js"></script>
+    <script src="./scripts/modules/revealing-module-pattern.js"></script>
+</body>
+</html>

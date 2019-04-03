@@ -1,0 +1,15 @@
+{
+  "name": "modules-examples",
+  "version": "1.0.0",
+  "description": "Aplicação com exemplos de módulos e runtime em NodeJS e para Web Browsers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "0.7.4",
+    "requirejs": "2.3.6"
+  }
+}
