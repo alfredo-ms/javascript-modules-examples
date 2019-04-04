@@ -31,7 +31,7 @@ const executeOptions = {
         const user = UMDModule.create();
         console.log(`Dados do usuário: ${JSON.stringify(user)}`);
         askQuestion();
-    }
+    },
 }
 
 const askQuestion = () => {

@@ -1,9 +1,11 @@
+import { fibonacci } from "../modules/es6/fibonacci.js";
+
 // Se o console xterm estiver em memória, use-o para output. Caso contrário, use o console.log;
 const outputFn = (outputVariable) => {
     term ? term.input(outputVariable) : console.log(outputVariable);
 };
 
-selectOptions = () => {
+export function selectOptions() {
     if (term) { term.clear(); }
 
     const selectElement = document.getElementById('module-select');
@@ -15,6 +17,7 @@ selectOptions = () => {
         outputFn('Escolha um tipo de módulo.');
     }
 }
+document.querySelector('#execute-button').addEventListener('click', selectOptions);
 
 const executeModuleCode = {
     'IIFE': () => {
@@ -39,5 +42,8 @@ const executeModuleCode = {
     'UMD': () => {
         const user = umdUser.create();
         outputFn(`Dados do usuário: ${JSON.stringify(user)}`);
+    },
+    'ES6': () => {
+        outputFn(`Função de fibonacci de 5 (importada de um módulo ESModule): ${fibonacci(5)}`);
     }
 };

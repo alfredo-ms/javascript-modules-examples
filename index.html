@@ -12,7 +12,7 @@
 
     <!-- carregamento de scripts externos e internos do projeto -->
     <script src="./scripts/browser/terminaljs/terminal.js"></script>
-    <script src="./scripts/browser/select-options.js"></script>
+    <script src="./scripts/browser/select-options.js" type="module"></script>
     <script data-main="./scripts/modules/amd/config" src="./node_modules/requirejs/require.js"></script>
 </head>
 <body>
@@ -29,12 +29,13 @@
                             <option value="REVEALING">Revealing Module Pattern</option>
                             <option value="AMD">AMD - Asynchronous Module Definition</option>
                             <option value="UMD">UMD - Universal Module Definition</option>
+                            <option value="ES6">ESModule - Ecma Script Module</option>
                         </select>
                     </div>
                 
                 </div>
                 <div class="level-item">
-                    <a class="button is-info is-rounded" onclick="selectOptions()">Executar</a>
+                    <a class="button is-info is-rounded"  id="execute-button">Executar</a>
                 </div>
             </div>
         </nav>

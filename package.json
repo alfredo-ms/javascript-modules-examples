@@ -5,12 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "serve": "http-server ./",
+    "serve:dist": "http-server ./dist",
+    "build": "parcel build index.html"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bulma": "0.7.4",
     "requirejs": "2.3.6"
+  },
+  "devDependencies": {
+    "@std/esm": "0.26.0",
+    "http-server": "0.11.1",
+    "parcel-bundler": "1.12.3"
   }
 }
