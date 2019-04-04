@@ -16,4 +16,5 @@ var RevealingModule = function(){
     }
   }
 
-  
+if (typeof exports === "object")
+    module.exports = RevealingModule;

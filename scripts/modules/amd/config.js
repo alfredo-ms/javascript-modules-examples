@@ -5,3 +5,7 @@ requirejs.config({
 requirejs(['fill-user'], (fillUser) => {
     window.fillUser = fillUser;
 })
+
+requirejs(['../umd/umd-user'], (umdUser) => {
+    window.umdUser = umdUser;
+})

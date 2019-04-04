@@ -35,5 +35,9 @@ const executeModuleCode = {
         outputFn(`Dados do usuário #1: ${JSON.stringify(user1)}`);
         outputFn(`Dados do usuário #2: ${JSON.stringify(user2)}`);
         outputFn(`Dados do usuário #3: ${JSON.stringify(user3)}`);
+    },
+    'UMD': () => {
+        const user = umdUser.create();
+        outputFn(`Dados do usuário: ${JSON.stringify(user)}`);
     }
 };
